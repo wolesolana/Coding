@@ -1,0 +1,3 @@
+public enum Book {
+    FIRST_BOOK, SECOND_BOOK, THIRD_BOOK, FOURTH_BOOK, FIFTH_BOOK
+}
