@@ -3,7 +3,6 @@ import java.util.*;
 
 public class Basket extends ArrayList<Book>{
 
-    private static final double BOOK_PRICE = 8.0;
     private static final Map<Integer, Double> DISCOUNTS =
             Collections.unmodifiableMap(new HashMap<Integer, Double>() {{
                 put(1, 8.0);
@@ -24,19 +23,18 @@ public class Basket extends ArrayList<Book>{
 
         while (!this.isEmpty()) {
 
-            List<Book> uniqueBooks = new ArrayList<Book>();
+            Set<Book> uniqueBooks = new HashSet<Book>();
 
             for (Book book : Book.values()) {
                 boolean remove = this.remove(book);
+
                 if (remove) {
                     uniqueBooks.add(book);
                 }
 
             }
+
             price += DISCOUNTS.get(uniqueBooks.size());
-
-
-
         }
 
         return price;
