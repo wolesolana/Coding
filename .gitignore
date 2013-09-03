@@ -1,6 +1,5 @@
 .DS_Store
 .idea
 *.iml
-Java/JavaTutorial
-Java/.DS_Store
+Java/*
 RubyOnRails/*
